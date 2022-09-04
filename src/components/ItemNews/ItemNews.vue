@@ -34,7 +34,7 @@
     width: 25%;
     min-width: 210px;
     padding: 0 5px;
-    margin-bottom: 10px;
+    margin: 0 auto 10px;
 
     a {
         text-decoration: none;
@@ -77,6 +77,16 @@
         font-size: 13px;
         color: #8a8282;
         padding-top: 15px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .new {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .new {
+        width: 100%;
     }
 }
 </style>
