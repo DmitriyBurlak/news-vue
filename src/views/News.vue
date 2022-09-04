@@ -85,6 +85,12 @@ export default {
 .favorites {
     padding-top: 20px;
 
+    .new {
+        margin: 0;
+        margin-bottom: 10px;
+        width: 25%;
+    }
+
     &__items {
         display: flex;
         overflow-x: auto;

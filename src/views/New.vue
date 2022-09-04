@@ -1,7 +1,7 @@
 <template>
-  <div class="new" v-if="news">
+  <div class="new-page" v-if="news">
     <Button @click="$router.go(-1)">Вернуться назад</Button>
-    <div class="new__info">
+    <div class="new-page__info">
       <div>
         <div>author: {{authorName(news.userId).name}}</div>
         <div>published: {{new Date(news.timestamp).formatting('dd.mm.yyyy')}}</div>
@@ -13,8 +13,8 @@
         <Button v-else color="success" @click="UPDATE_FAVORITES(news.id)">В избраное</Button>
       </div>
     </div>
-    <div class="new__title">{{news.title}}</div>
-    <div class="new__content">{{news.body}}</div>
+    <div class="new-page__title">{{news.title}}</div>
+    <div class="new-page__content">{{news.body}}</div>
   </div>
 </template>
 
@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .new {
+  .new-page {
     &__info {
       display: flex;
       justify-content: space-between;

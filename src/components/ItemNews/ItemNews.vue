@@ -29,7 +29,7 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .new {
     width: 25%;
     min-width: 210px;
