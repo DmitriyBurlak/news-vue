@@ -32,11 +32,14 @@ export default {
     components: { ItemNews, Button },
     mounted() {
         window.addEventListener('scroll', this.handleScroll);
-        this.SET_DATA();
         console.log('mounted');
     },
     destroyed() {
         window.removeEventListener('scroll', this.handleScroll);
+    },
+    updated() {
+        console.log('updated');
+        this.handleScroll();
     },
     computed: {
         ...mapGetters([
@@ -55,7 +58,6 @@ export default {
         ]),
         handleScroll() {
             let blockNews = this.$refs.news;
-
             if (blockNews) {
                 let innerHeight = window.innerHeight;
                 var blockNewsBottom = blockNews.getBoundingClientRect().bottom;
